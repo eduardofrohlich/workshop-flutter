@@ -6,7 +6,7 @@ class PlacesListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Places'),
+        title: Text('My Places'),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -16,14 +16,8 @@ class PlacesListScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
-        children: [
-          TextField(
-            decoration: InputDecoration(
-              labelText: 'Title',
-            ),
-          )
-        ],
+      body: const Center(
+        child: CircularProgressIndicator(),
       ),
     );
   }

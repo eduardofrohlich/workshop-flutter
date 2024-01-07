@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:project_great_places/models/place.dart';
 
@@ -16,5 +19,17 @@ class GreatPlaces with ChangeNotifier {
   // Path: lib/providers/great_places.dart
   Place findItemByIndex(int index) {
     return _items[index];
+  }
+
+  void addPlace(String title, File image) {
+    final newPlace = Place(
+      id: Random().nextDouble().toString(),
+      title: title,
+      image: image,
+      location: PlaceLocation(latitude: 0.0, longitude: 0.0, address: ''),
+    );
+
+    _items.add(newPlace);
+    notifyListeners(); //atualizar componentes dependentes
   }
 }
