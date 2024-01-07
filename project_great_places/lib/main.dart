@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       home: PlacesListScreen(),
       routes: {
+        // ignore: prefer_const_constructors
         AppRoutes.PLACE_FORM: (ctx) => PlaceFormScreen(),
       },
     );
