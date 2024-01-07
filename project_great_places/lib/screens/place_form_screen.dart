@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:project_great_places/widgets/images_input.dart';
+import 'package:project_great_places/widgets/image_input.dart';
 
 class PlaceFormScreen extends StatefulWidget {
   const PlaceFormScreen({super.key});
@@ -12,6 +14,11 @@ class PlaceFormScreen extends StatefulWidget {
 
 class _PlaceFormScreenState extends State<PlaceFormScreen> {
   final _titleController = TextEditingController();
+  File? _pickedImage;
+
+  void _selectImage(File pickedImage) {
+    _pickedImage = pickedImage;
+  }
 
   void _submitForm() {}
 
@@ -37,7 +44,7 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    ImageInput(),
+                    ImageInput(_selectImage),
                   ],
                 ),
               ),
