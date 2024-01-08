@@ -46,7 +46,7 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10),
                 child: Column(
                   children: [
                     TextField(
@@ -57,6 +57,7 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
                     ),
                     SizedBox(height: 10),
                     ImageInput(_selectImage),
+                    SizedBox(height: 10),
                     LocationInput(),
                   ],
                 ),
