@@ -37,6 +37,7 @@ class PlacesListScreen extends StatelessWidget {
                                 greatPlaces.findItemByIndex(index).image),
                           ),
                           title: Text(greatPlaces.findItemByIndex(index).title),
+                          subtitle: Text(greatPlaces.findItemByIndex(index).location!.address!),
                           onTap: () {},
                         ),
                       ),
