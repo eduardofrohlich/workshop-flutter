@@ -36,7 +36,9 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
   }
 
   bool _isValidForm() {
-    return _titleController.text.isNotEmpty && _pickedImage != null && _pickedPosition != null;
+    return _titleController.text.isNotEmpty &&
+        _pickedImage != null &&
+        _pickedPosition != null;
   }
 
   void _submitForm() {
@@ -71,6 +73,9 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
                       decoration: InputDecoration(
                         labelText: 'Title',
                       ),
+                      onChanged: (text) {
+                        setState(() {});
+                      },
                     ),
                     SizedBox(height: 10),
                     ImageInput(_selectImage),
